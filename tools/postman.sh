@@ -14,3 +14,5 @@ Terminal=false
 Type=Application
 Categories=Development;
 EOL
+
+rm postman.tar.gz
