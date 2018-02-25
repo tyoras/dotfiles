@@ -7,9 +7,10 @@ echo -e "\nPassword for sudo commands"
 sudo -v
 
 # vim
-#echo -e "\n- Installing vim settings"
+echo -e "\n- Installing vim settings"
 #ln -s ${BASEDIR}/vimrc ~/.vimrc
 #ln -s ${BASEDIR}/vim/ ~/.vim
+git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 
 # zsh
 #echo -e "\n- Installing zsh settings"
