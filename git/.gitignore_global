@@ -2,3 +2,7 @@
 node_modules
 *.class
 *.log
+*.swp
+.vscode/
+.metals/
+
