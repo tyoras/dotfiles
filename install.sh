@@ -17,6 +17,8 @@ ln -sfv ${BASEDIR}/git/.gitignore_global ~
 # console
 ./console/fonts.sh
 sudo apt install -y terminator
+ln -sfv ${BASEDIR}/console/terminator/config ~/.config/terminator.config
+sudo apt-get install python3-pygments
 
 # vim
 echo -e "\n- Installing vim settings"
@@ -45,4 +47,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo -e "\n- Starting to install tools"
 ./tools/ctop.sh
 ./tools/postman.sh
+./tools/jmv.sh
 
