@@ -7,11 +7,14 @@ echo -e "\nPassword for sudo commands"
 sudo -v
 
 sudo apt update
+sudo apt install -y curl wget build-essential libxext-dev xsel
 
 # console
 ./tools/fonts.sh
 sudo apt install -y terminator
-sudo apt-get install python3-pygments fzf ripgrep universal-ctags silversearcher-ag fd-find
+sudo apt install -y python3-pygments 
+# fzf
+sudo apt install -y fzf ripgrep universal-ctags silversearcher-ag fd-find
 
 # vim
 echo -e "\n- Installing vim settings"
@@ -36,15 +39,37 @@ sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 ./tools/zsh/tyoras-agitnoster-theme.sh
 
+# node + yarn
+./tools/nodejs.sh
+npm i -g yarn
+
+# ranger
+./tools/ranger.sh
+
+# nvim
+echo -e "\n- Installing neovim settings"
+sudo apt install -y neovim
+pip install pynvim
+npm i -g neovim
+mkdir -p ~/.config/coc/extensions
+cd ~/.config/coc/extensions
+if [ ! -f package.json ]
+then
+  echo '{"dependencies":{}}'> package.json
+fi
+# Change extension names to the extensions you need
+npm install coc-snippets coc-python coc-tsserver coc-html coc-css coc-json coc-yaml coc-metals coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+cd ${BASEDIR}
+
 # tools
 echo -e "\n- Starting to install tools"
-sudo apt install htop
+sudo apt install -y htop
 ./tools/ctop.sh
 ./tools/postman.sh
-./tools/jmv.sh
+./tools/jvm.sh
 
 # stow dotfiles
 echo -e "\n- Starting to stow dotfiles"
-sudo apt install stow
-stow -v -d stow -t ~ git htop terminator
+sudo apt install -y stow
+stow -v -d stow -t ~ git htop terminator zsh ranger
 stow -nv -d stow -t ~ zsh
