@@ -11,7 +11,7 @@ sudo apt update
 # console
 ./tools/fonts.sh
 sudo apt install -y terminator
-sudo apt-get install python3-pygments
+sudo apt-get install python3-pygments fzf ripgrep universal-ctags silversearcher-ag fd-find
 
 # vim
 echo -e "\n- Installing vim settings"
@@ -33,7 +33,8 @@ git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons
 # zsh
 echo -e "\n- Installing zsh settings"
 sudo apt install -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+./tools/zsh/tyoras-agitnoster-theme.sh
 
 # tools
 echo -e "\n- Starting to install tools"
@@ -45,4 +46,5 @@ sudo apt install htop
 # stow dotfiles
 echo -e "\n- Starting to stow dotfiles"
 sudo apt install stow
-stow -nv -d stow -t ~ git htop terminator
+stow -v -d stow -t ~ git htop terminator
+stow -nv -d stow -t ~ zsh
