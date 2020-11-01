@@ -1,1 +1,3 @@
 *.swp
+nvim/nvim
+nvim/autoload/plugged
