@@ -42,3 +42,9 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 " highlith cjson comments
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
+" rainbow parentheses
+let g:rainbow#max_level = 16
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+
+autocmd FileType * RainbowParentheses
+

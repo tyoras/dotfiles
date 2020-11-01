@@ -27,7 +27,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
-    "  Need to be at the end
+    " Colors
+    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'junegunn/rainbow_parentheses.vim'
+    " Need to be at the end
     Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
