@@ -8,16 +8,9 @@ sudo -v
 
 sudo apt update
 
-# git
-echo -e "\n- Installing git settings"
-sudo apt install -y git
-ln -sfv ${BASEDIR}/git/.gitconfig ~
-ln -sfv ${BASEDIR}/git/.gitignore_global ~
-
 # console
-./console/fonts.sh
+./tools/fonts.sh
 sudo apt install -y terminator
-ln -sfv ${BASEDIR}/console/terminator/config ~/.config/terminator.config
 sudo apt-get install python3-pygments
 
 # vim
@@ -41,11 +34,15 @@ git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons
 echo -e "\n- Installing zsh settings"
 sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#ln -s ${BASEDIR}/zshrc ~/.zshrc
 
 # tools
 echo -e "\n- Starting to install tools"
+sudo apt install htop
 ./tools/ctop.sh
 ./tools/postman.sh
 ./tools/jmv.sh
 
+# stow dotfiles
+echo -e "\n- Starting to stow dotfiles"
+sudo apt install stow
+stow -nv -d stow -t ~ git htop terminator
