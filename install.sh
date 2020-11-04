@@ -38,6 +38,7 @@ echo -e "\n- Installing zsh settings"
 sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 ./tools/zsh/tyoras-agitnoster-theme.sh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # node + yarn
 ./tools/nodejs.sh
