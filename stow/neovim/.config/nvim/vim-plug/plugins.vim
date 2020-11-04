@@ -10,14 +10,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    "Plug 'preservim/nerdtree'
-    "Plug 'Xuyuanp/nerdtree-git-plugin'
     " Auto pairs for '(' '[' '{' 
     Plug 'jiangmiao/auto-pairs'
     " Themes
     Plug 'joshdick/onedark.vim'
-    Plug 'git@gitlab.com:yorickpeterse/happy_hacking.vim.git'
     " Status line
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'" 

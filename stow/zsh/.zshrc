@@ -72,7 +72,6 @@ plugins=(
   git
   docker
   docker-compose
-  git-flow
   jsontools
   mvn
   npm
@@ -81,6 +80,7 @@ plugins=(
   sudo
   minikube
   sbt
+  ssh-agent
 )
 
 source $ZSH/oh-my-zsh.sh
