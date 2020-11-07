@@ -72,5 +72,4 @@ sudo apt install -y htop
 # stow dotfiles
 echo -e "\n- Starting to stow dotfiles"
 sudo apt install -y stow
-stow -v -d stow -t ~ git htop terminator zsh ranger
-stow -nv -d stow -t ~ zsh
+stow -v -d stow -t ~ git htop terminator zsh ranger idea neovim
