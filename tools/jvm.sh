@@ -1,14 +1,15 @@
 #!/bin/bash
 
+echo -e "\n-- Downloading coursier and installing jvm + apps"
+curl -fLo cs https://git.io/coursier-cli-"$(uname | tr LD ld)"
+chmod +x cs
+./cs setup --yes --jvm graalvm-ce-java11 --env --apps ammonite,bloop,cs,giter8,sbt,scala,scalafmt
+rm cs
+
 echo -e "\n-- Installing Sdkman"
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk install java
 sdk install maven
-sdk install scala
-sdk install sbt
 sdk install groovy
 sdk install visualvm
 
-echo -e "\n-- Installing ammonite"
-sudo sh -c '(echo "#!/usr/bin/env sh" && curl -L https://github.com/lihaoyi/Ammonite/releases/download/2.0.4/2.13-2.0.4) > /usr/local/bin/amm && chmod +x /usr/local/bin/amm'
