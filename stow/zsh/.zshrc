@@ -129,3 +129,8 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 if [ -f "$HOME/.local/.zshrc" ] ; then
   source "$HOME/.local/.zshrc"
 fi
+
+# >>> scala-cli completions >>>
+fpath=("$HOME/.local/share/scalacli/completions/zsh" $fpath)
+compinit
+# <<< scala-cli completions <<<
