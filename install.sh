@@ -11,8 +11,11 @@ sudo apt install -y curl wget build-essential libxext-dev xsel
 
 # console
 ./tools/fonts.sh
-sudo apt install -y terminator
-sudo apt install -y python3-pygments 
+sudo apt install -y terminator python3-pygments bat
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+sudo wget https://github.com/dandavison/delta/releases/download/0.11.2/git-delta_0.11.2_amd64.deb -O /tmp/delta.deb
+sudo dpkg -i /tmp/delta.deb
 # fzf
 sudo apt install -y fzf ripgrep universal-ctags silversearcher-ag fd-find
 
@@ -72,4 +75,4 @@ sudo apt install -y htop
 # stow dotfiles
 echo -e "\n- Starting to stow dotfiles"
 sudo apt install -y stow
-stow -v -d stow -t ~ git htop terminator zsh ranger idea neovim
+stow -v -d stow -t ~ git htop terminator zsh ranger idea neovim bat

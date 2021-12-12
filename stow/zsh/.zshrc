@@ -119,6 +119,9 @@ alias vimconfig="nvim ~/.vimrc"
 alias sshconfig="nvim ~/.ssh/config"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias cat='pygmentize -g'
+alias fzfp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+alias v=nvim
+alias g=git
 
 export DEFAULT_USER="yoan"
 
@@ -134,3 +137,6 @@ fi
 fpath=("$HOME/.local/share/scalacli/completions/zsh" $fpath)
 compinit
 # <<< scala-cli completions <<<
+
+# use bat for man
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
