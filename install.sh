@@ -13,7 +13,7 @@ sudo apt install -y curl wget build-essential libxext-dev xsel
 ./tools/fonts.sh
 sudo apt install -y terminator python3-pygments bat
 mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat
+sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 sudo wget https://github.com/dandavison/delta/releases/download/0.11.2/git-delta_0.11.2_amd64.deb -O /tmp/delta.deb
 sudo dpkg -i /tmp/delta.deb
 # fzf
