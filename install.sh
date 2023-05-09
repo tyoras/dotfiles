@@ -65,6 +65,10 @@ fi
 npm install coc-snippets coc-python coc-tsserver coc-html coc-css coc-json coc-yaml coc-metals coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 cd ${BASEDIR}
 
+#tmux
+sudo apt install -y tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # tools
 echo -e "\n- Starting to install tools"
 sudo apt install -y htop
@@ -75,4 +79,4 @@ sudo apt install -y htop
 # stow dotfiles
 echo -e "\n- Starting to stow dotfiles"
 sudo apt install -y stow
-stow -v -d stow -t ~ git htop terminator zsh ranger idea neovim bat
+stow -v -d stow -t ~ git htop terminator zsh ranger idea neovim bat tmux

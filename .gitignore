@@ -1,2 +1,3 @@
 *.swp
 stow/neovim/.config/nvim/autoload
+stow/tmux/.config/tmux/plugins
