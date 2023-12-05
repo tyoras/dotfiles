@@ -50,19 +50,19 @@ npm i -g yarn
 # ranger
 ./tools/ranger.sh
 
-# nvim
+# neovim
 echo -e "\n- Installing neovim settings"
-sudo apt install -y neovim
-pip install pynvim
-npm i -g neovim
-mkdir -p ~/.config/coc/extensions
-cd ~/.config/coc/extensions
-if [ ! -f package.json ]
-then
-  echo '{"dependencies":{}}'> package.json
-fi
-# Change extension names to the extensions you need
-npm install coc-snippets coc-python coc-tsserver coc-html coc-css coc-json coc-yaml coc-metals coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+sudo snap install nvim --classiic
+#pip install pynvim
+#npm i -g neovim
+#mkdir -p ~/.config/coc/extensions
+#cd ~/.config/coc/extensions
+#if [ ! -f package.json ]
+#then
+#  echo '{"dependencies":{}}'> package.json
+#fi
+## Change extension names to the extensions you need
+#npm install coc-snippets coc-python coc-tsserver coc-html coc-css coc-json coc-yaml coc-metals coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 cd ${BASEDIR}
 
 #tmux
