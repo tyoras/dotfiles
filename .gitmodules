@@ -1,0 +1,3 @@
+[submodule "stow/neovim/.config/nvim"]
+	path = stow/neovim/.config/nvim
+	url = https://github.com/tyoras/tyoras.nvim
