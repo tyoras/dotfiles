@@ -5,4 +5,6 @@ node_modules
 *.swp
 .vscode/
 .metals/
-
+.bloop/
+.ammonite/
+metals.sbt
