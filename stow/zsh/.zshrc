@@ -126,7 +126,7 @@ alias g=git
 export DEFAULT_USER="yoan"
 
 # FZF bindings
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/fzf/shell/key-bindings.zsh 
 
 # source local settings
 if [ -f "$HOME/.local/.zshrc" ] ; then
